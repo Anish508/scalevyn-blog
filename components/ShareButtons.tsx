@@ -84,9 +84,9 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-3 bg-white rounded-lg shadow-lg border border-slate-100 p-3 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
+        <div className="fixed left-4 right-4 bottom-20 mx-auto max-w-xs bg-white rounded-lg shadow-lg border border-slate-100 p-3 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
           {/* Horizontal icon grid */}
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex items-center justify-center gap-3 flex-wrap">
             {platforms.map((p) => (
               <a
                 key={p.name}
@@ -94,7 +94,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className={`w-10 h-10 rounded-lg ${p.color} text-white flex items-center justify-center transition-transform hover:scale-110`}
+                className={`w-10 h-10 rounded-lg ${p.color} text-white flex items-center justify-center transition-transform hover:scale-110 flex-shrink-0`}
                 title={p.name}
               >
                 {p.icon}
@@ -104,7 +104,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
             {/* Copy link icon */}
             <button
               onClick={handleCopy}
-              className="w-10 h-10 rounded-lg bg-brand-600 hover:bg-brand-700 text-white flex items-center justify-center transition-transform hover:scale-110"
+              className="w-10 h-10 rounded-lg bg-brand-600 hover:bg-brand-700 text-white flex items-center justify-center transition-transform hover:scale-110 flex-shrink-0"
               type="button"
               title={copied ? "Link copied!" : "Copy link"}
             >
