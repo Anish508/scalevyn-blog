@@ -86,7 +86,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-brand-700 bg-slate-100 hover:bg-brand-50 px-3 py-1.5 rounded-lg transition-colors"
+        className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-brand-700 bg-white hover:bg-brand-50 border border-slate-200 hover:border-brand-300 px-4 py-2 rounded-xl transition-colors shadow-sm"
         type="button"
         aria-label="Share this article"
       >
@@ -96,7 +96,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute right-0 bottom-full mb-2 w-56 bg-white rounded-xl shadow-xl border border-slate-100 p-2 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
+        <div className="absolute right-0 bottom-full mb-2 w-64 sm:w-56 bg-white rounded-xl shadow-xl border border-slate-100 p-2 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
           {/* Header */}
           <div className="flex items-center justify-between px-2 py-1.5 mb-1">
             <span className="text-xs font-semibold text-slate-400 uppercase tracking-wide">
@@ -104,7 +104,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
             </span>
             <button
               onClick={() => setOpen(false)}
-              className="w-5 h-5 rounded flex items-center justify-center text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+              className="w-6 h-6 rounded flex items-center justify-center text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
               type="button"
             >
               <X className="w-3.5 h-3.5" />
@@ -119,10 +119,10 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors group"
+              className="flex items-center gap-3 px-2 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors group"
             >
               <span
-                className={`w-7 h-7 rounded-lg ${p.color} text-white flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110`}
+                className={`w-8 h-8 rounded-lg ${p.color} text-white flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110`}
               >
                 {p.icon}
               </span>
@@ -136,10 +136,10 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
           {/* Copy link */}
           <button
             onClick={handleCopy}
-            className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors w-full group"
+            className="flex items-center gap-3 px-2 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors w-full group"
             type="button"
           >
-            <span className="w-7 h-7 rounded-lg bg-brand-600 hover:bg-brand-700 text-white flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110">
+            <span className="w-8 h-8 rounded-lg bg-brand-600 hover:bg-brand-700 text-white flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110">
               {copied ? (
                 <Check className="w-4 h-4" />
               ) : (

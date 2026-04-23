@@ -5,7 +5,6 @@ import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
 import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
-import Image from "next/image";
 import type { Components } from "react-markdown";
 
 interface MarkdownRendererProps {
@@ -36,20 +35,21 @@ const components: Components = {
     }
 
     return (
-      <span className="block my-6">
-        <Image
+      <figure className="my-6">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={src as string}
           alt={alt ?? "Blog image"}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 900px"
-          className="rounded-xl w-full h-auto shadow-card object-cover"
+          loading="lazy"
+          className="rounded-xl shadow-card"
+          style={{ maxWidth: "100%", height: "auto", display: "block" }}
         />
         {alt && (
-          <span className="block text-center text-sm text-slate-400 mt-2 italic">
+          <figcaption className="text-center text-sm text-slate-400 mt-2 italic">
             {alt}
-          </span>
+          </figcaption>
         )}
-      </span>
+      </figure>
     );
   },
 

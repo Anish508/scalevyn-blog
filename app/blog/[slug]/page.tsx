@@ -187,7 +187,7 @@ export default async function BlogPostPage({ params }: Props) {
           <MarkdownRenderer content={post.content} />
 
           {/* Bottom share + tags */}
-          <div className="mt-12 pt-8 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+          <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
             {post.tags && post.tags.length > 0 && (
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
@@ -201,7 +201,9 @@ export default async function BlogPostPage({ params }: Props) {
                 ))}
               </div>
             )}
-            <ShareButtons title={post.title} slug={post.slug} />
+            <div className="w-full sm:w-auto flex sm:justify-end">
+              <ShareButtons title={post.title} slug={post.slug} />
+            </div>
           </div>
         </div>
 
