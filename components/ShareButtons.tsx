@@ -45,7 +45,13 @@ const platforms = [
   {
     name: "Email",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg
+        viewBox="0 0 24 24"
+        className="w-4 h-4 fill-none stroke-current"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <rect x="2" y="4" width="20" height="16" rx="2" />
         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
       </svg>
@@ -96,7 +102,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute right-0 bottom-full mb-2 w-64 sm:w-56 bg-white rounded-xl shadow-xl border border-slate-100 p-2 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
+        <div className="absolute left-0 sm:left-auto sm:right-0 bottom-full mb-2 w-64 sm:w-56 bg-white rounded-xl shadow-xl border border-slate-100 p-2 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
           {/* Header */}
           <div className="flex items-center justify-between px-2 py-1.5 mb-1">
             <span className="text-xs font-semibold text-slate-400 uppercase tracking-wide">
@@ -143,7 +149,13 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
               {copied ? (
                 <Check className="w-4 h-4" />
               ) : (
-                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  viewBox="0 0 24 24"
+                  className="w-4 h-4 fill-none stroke-current"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
                 </svg>
