@@ -35,13 +35,13 @@ const components: Components = {
     }
 
     return (
-      <figure className="my-6">
+      <figure className="my-6 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={src as string}
           alt={alt ?? "Blog image"}
           loading="lazy"
-          className="rounded-xl shadow-card"
+          className="rounded-xl shadow-card w-full"
           style={{ maxWidth: "100%", height: "auto", display: "block" }}
         />
         {alt && (
