@@ -102,7 +102,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute left-0 sm:left-auto sm:right-0 bottom-full mb-2 w-64 sm:w-56 bg-white rounded-xl shadow-xl border border-slate-100 p-2 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
+        <div className="absolute left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0 bottom-full mb-2 w-64 sm:w-56 bg-white rounded-xl shadow-xl border border-slate-100 p-2 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
           {/* Header */}
           <div className="flex items-center justify-between px-2 py-1.5 mb-1">
             <span className="text-xs font-semibold text-slate-400 uppercase tracking-wide">
